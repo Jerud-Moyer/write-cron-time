@@ -10,4 +10,3 @@ export function read(filepath) {
   });
   return jobs;
 }
-

@@ -36,6 +36,7 @@ export const getDates = (job) => {
     jobMonth = Number(jobMonth.split('/')[1]);
   }
   if(jobMonth === '*') jobMonth = month;
+  if(jobMonth === month && Number(jobDate) > day) jobMonth += 1;
   if(Number(jobMonth) < month) jobYear += 1; 
 
   //day
@@ -54,7 +55,7 @@ export const getDates = (job) => {
   }
   if(jobDate === '*') jobDate = day;
   if(jobDate === '0') console.error('Day of month must have a value of 1-31, or *');
-  if(Number(jobDate) < day && jobMonth <= month && jobDate !== '0') jobMonth += 1;
+  if(Number(jobDate) < day && jobDate !== '0') jobMonth += 1;
 
   //hour
   if(jobHour && typeof jobHour === 'string' && jobHour.includes(',')) {
