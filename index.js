@@ -11,4 +11,3 @@ export function read(filepath) {
   return jobs;
 }
 
-read('./crontab.txt');
