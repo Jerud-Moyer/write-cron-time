@@ -1,6 +1,15 @@
-## create a library that can read a crontab and return to a user the date and time that each job will run relative to the current time.
+## A library that can read a crontab and return to a user the date and time that each job will run relative to the current time.
 
-### todos:
-1. write script to parse crontab
+## Installation
 
-1. research how to format code as a library
+```
+npm i write-cron-time --save
+```
+### example
+ ```
+ import { read } from 'write-cron-time'
+
+ const jobTimes = read('./your-crontab')
+ ```
+
+ returns an array of dates and times with each job name.
