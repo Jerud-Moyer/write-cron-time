@@ -105,4 +105,7 @@ export const getDates = (job) => {
 
   console.log(`the job: ${job[job.length - 1]} 
   will next run on ${jobDay ? scheduledByDay : nextScheduled}`);
+
+  if(jobDay) return { job: job[job.length - 1], date: scheduledByDay };
+  return { job: job[job.length - 1], date: nextScheduled }; 
 };
