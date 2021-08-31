@@ -1,13 +1,14 @@
 import { getDates } from './utils.js';
-import data from './data';
+import data from './data.js';
 
-function read(filepath) {
+export function read(filepath) {
   const jobs = [];
   const cronTab = data(filepath);
   cronTab.forEach(job => {
     const jobDate = getDates(job);
     jobs.push(jobDate);
   });
+  return jobs;
 }
 
-module.exports.read = read;
+read('./crontab.txt');

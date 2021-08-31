@@ -1,5 +1,5 @@
 {
-  "name": "cron-time-util",
+  "name": "write-cron-time",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,10 @@
     "test:watch": "npm run test -- --watch",
     "start": "node index.js",
     "start:watch": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerud-Moyer/write-cron-time"
   },
   "jest": {
     "testEnvironment": "node"
